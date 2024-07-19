@@ -1,6 +1,5 @@
 data "aws_subnet_ids" "rds_proxy_subnets" {
   vpc_id = var.vpc_id
-  tags = var.vpc_subnet_filter_tag
 }
 
 data "aws_iam_role" "rds_proxy_role" {

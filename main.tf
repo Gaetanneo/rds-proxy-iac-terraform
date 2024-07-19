@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = var.aws_region
+  region = var.aws_region
 }
 
 resource "aws_db_proxy" "this" {
@@ -19,7 +19,7 @@ resource "aws_db_proxy" "this" {
     secret_arn  = data.aws_secretsmanager_secret.rds_secret.arn
   }
 
-  tags = var.rds_proxy_tags
+  #tags = var.rds_proxy_tags
 }
 
 resource "aws_db_proxy_default_target_group" "this" {
